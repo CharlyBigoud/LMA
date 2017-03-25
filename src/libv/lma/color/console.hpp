@@ -31,13 +31,13 @@
     std::string green() const { return "\033[32m"; }
     std::string white() const { return "\033[37m"; }
     std::string cyan() const { return "\033[36m"; }
-    std::string yellow() const{ return "\033[33m"; }
-    std::string blue() const{ return "\033[34m"; }
-    std::string magenta() const{ return "\033[35m"; }
-    std::string bold() const { return this->operator()(1);}
-    std::string underline() const { return this->operator()(4);}
-    std::string background() const { return this->operator()(7);}
-    std::string barre() const { return this->operator()(9);}
+    std::string yellow() const { return "\033[33m"; }
+    std::string blue() const { return "\033[34m"; }
+    std::string magenta() const { return "\033[35m"; }
+    std::string bold() const { return this->operator()(1); }
+    std::string underline() const { return this->operator()(4); }
+    std::string background() const { return this->operator()(7); }
+    std::string barre() const { return this->operator()(9); }
     std::string italic() const { return "\033[3m"; }
     std::string yellow(const std::string& str) const { return yellow() + str + reset(); }
     std::string green(const std::string& str) const { return green() + str + reset(); }
