@@ -176,11 +176,11 @@ int main()
 
   v::viewer(0).size(800,600).title("3D").interaction_mode(v::INTERACTION_CAD).add_opengl(boost::bind(draw,p3ds,poses,30)).update();
 
-  std::cout << " MODEL ORIGINAL : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
+  std::cout << " MODELE ORIGINAL : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
 
   model = v::UnifiedCameraModel(750,850,300,200,1.5);
 
-  std::cout << " MODEL BRUITER : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
+  std::cout << " MODELE BRUITE : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
   
   lma::Solver<Error> solver(-1,500,0.999999999);
 
@@ -191,7 +191,7 @@ int main()
   // changement de repère monde -> caméra
 
   // std::cout << " Coordonnées du point dans l'image : " << p2d.transpose() << std::endl;
-  std::cout << " MODEL APRES OPTIMISATION : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
+  std::cout << " MODELE APRES OPTIMISATION : " << model.focal.transpose() << " ; " << model.center.transpose() << " ; " << model.xi << std::endl;
 
   v::viewer(0).clear().size(800,600).title("3D").interaction_mode(v::INTERACTION_CAD).add_opengl(boost::bind(draw,p3ds,poses,30)).update();
 
