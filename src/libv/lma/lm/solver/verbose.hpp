@@ -182,6 +182,9 @@ private:
       // std::cerr << boost::format(format) % "Final cost" % s.final_cost;
 //       std::cerr << boost::format(format) % "Total time" % clock_total.toc()
       ;
+
+      std::cout << color.reset() << std::endl;
+
     }
   };
 }
